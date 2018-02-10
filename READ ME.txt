@@ -1,0 +1,37 @@
+Python Minimum Path Traversal READ-ME
+Created on Sun JAN 29 16:03:58 2018
+@author: Archie Paredes
+
+Problem:
+The purpose of this program is to find the minimum path it takes to traverse from
+the top of the peak of a triangle to the bottom(base) of it. Each row of the 
+triangle is unsorted and contains integers of varying value. 
+
+Example:
+06                              # index n = 0. Starting(peak) index n = 0
+44 23                           # index n + 1 is smaller than n. current index n = 1            
+33 12 53                        # index n is smaller than index n + 1. current index n = 1
+21 93 02 65                     # index n + 1 is smaller than the previous nth element. current index n = 2
+05 13 09 77 81                  # index n is smaller than index n + 1. current index n = 2
+73 75 33 42 12 56               # index n is smaller than index n + 1. current index n = 2
+32 99 12 11 12 45 86            # index n + 1 is smaller than the previous nth element. Bottom(base) index n = 3
+
+Desired output:
+06
+23
+12
+02
+09
+33
+11
+
+Explanation:
+In short, only index n and n + 1 are connected to the original index. 
+With that said, those are the only two values that we are comparing. Which
+ever is the minimum value, the value gets placed with the other desired outputs.
+
+Conclusion:
+Contained with this practice are two triangles. One Large and one small. The name of each file
+can be editted within the main function if you choose to see the result of a specific triangle.
+
+Triangle .txt files were provided by Oracle Recruiting Team
