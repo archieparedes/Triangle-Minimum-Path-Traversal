@@ -1,6 +1,6 @@
 """
 Python Intern Test
-Created on Sun JAN 28 12:34:51 2018
+Updated on Tue MAR 14:16:21 2018
 @author: Archie Paredes
 """
 def minPath(twoDLst, intLst):
@@ -20,12 +20,12 @@ def minPath(twoDLst, intLst):
 
     return(minLst)
 
-def main():
-    fileName = 'small_triangle.txt' #'large_triagle.txt'
+def twoDMaker(fileName):
     infile = open(fileName, 'r')
     lst = infile.readlines() 
     intLst = []
     twoDLst = []
+    finalList = []
 
     for line in range(0, len(lst)): # Nested for loop that creates a 2d list from .txt file
         for num in lst[line].split(): # Reads each integer from specific line
@@ -34,8 +34,10 @@ def main():
         intLst = [] # Clears list for next line
     
     for i in minPath(twoDLst, intLst): # Output
-        print(i)
+        finalList.append(i)
+    return(finalList)
 
-# File name can be editted within main function
-if __name__ == '__main__':
-    main()
+fileName = str(input("Enter file name: "))
+
+for i in twoDMaker(fileName):
+    print(i)
